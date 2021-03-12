@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../stylesheets/landing.css">
+</head>
+<body>
+    <div id="background">
+        <nav>
+            <div class="logo"> 
+                <a href="/"> <img src="../images/logo2.png" alt="om"></a>
+               
+            </div>
+            <div class="links">
+                <a href="/signin" id="joinnow" > Join Now </a>
+                <a href="/" id="login">Sign In </a>
+            </div>
+        </nav>
+        <div class="container">
+
+            <div id="form">
+                <form method="POST" action="/register">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Username</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username" required name="username">
+                     
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Phone Number</label>
+                      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Phone Number" required name="number">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required name="password">
+                      </div>
+                    
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                      
+
+                        <div>
+                            <% if(typeof errors != 'undefined'){ %>
+                              <% errors.forEach(function(err){ %>
+                                <small class="text-danger" style="display: block;"><%= err.msg %>  </small>
+                             
+                            <%  }) %>
+                           <% } %>
+                          </div>
+                      
+                    
+                    
+                  </form>
+            </div>
+        
+     
+        </div>
+    </div>
+</body>
+</html>
